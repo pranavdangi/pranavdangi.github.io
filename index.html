@@ -18,7 +18,7 @@
         }
         .top-row {
             display: flex;
-            height: 10%;
+            height: 15%;
             border: 1px solid #808080;
         }
         .logo {
@@ -39,7 +39,7 @@
             border: 1px solid #808080;
         }
         .main-content {
-            height: 90%;
+            height: 85%;
             border: 1px solid #808080;
         }
         iframe {
@@ -68,9 +68,9 @@
         var ifr = document.getElementById('main-frame');
         var logoImage = document.getElementById('logoImage');
         var topSticky = document.getElementById('top-sticky');
-        //topSticky.addEventListener('mouseover', function() {
-        //    logoImage.src = 'logo.html';  // Original image URL
-        //});
+        topSticky.addEventListener('mouseover', function() {
+            logoImage.src = 'logo.html';  // Original image URL
+        });
         window.addEventListener('message', function(event) {
             if (event.data === 'changeToOtherImage') {
                 document.getElementById('logoImage').src = 'otherImage.html';
