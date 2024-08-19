@@ -130,24 +130,40 @@ B.E., Birla Institute of Technology and Science (BITS), Pilani, 2023.<br>
 Last updated 15 August 2024
 </font></p>
 </body>
-
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var scroll_dir = true;
     let oldScroll = window.scrollY;
     let lastDirection = null;
 
+//    function handleScroll() {
+//        let currentScroll = window.scrollY;
+//        let scrollDirection = currentScroll > oldScroll ? 'down' : 'up';
+//
+//        if (scrollDirection !== lastDirection) {
+//            if (scrollDirection === 'down') {
+//                window.parent.postMessage('changeToOtherImage', '*');
+//            } else if (scrollDirection === 'up') {
+//                window.parent.postMessage('changeToLogo', '*');
+//            }
+//            lastDirection = scrollDirection;
+//            oldScroll = currentScroll;
+//        }
+//    }
+    let scrollThreshold = 50;
     function handleScroll() {
         let currentScroll = window.scrollY;
         let scrollDirection = currentScroll > oldScroll ? 'down' : 'up';
 
-        if (scrollDirection !== lastDirection) {
-            if (scrollDirection === 'down') {
-                window.parent.postMessage('changeToOtherImage', '*');
-            } else if (scrollDirection === 'up') {
-                window.parent.postMessage('changeToLogo', '*');
+        if (Math.abs(currentScroll - oldScroll) > scrollThreshold) {
+            if (scrollDirection !== lastDirection) {
+                if (scrollDirection === 'down') {
+                    window.parent.postMessage('changeToOtherImage', '*');
+                } else if (scrollDirection === 'up') {
+                    window.parent.postMessage('changeToLogo', '*');
+                }
+                lastDirection = scrollDirection;
             }
-            lastDirection = scrollDirection;
             oldScroll = currentScroll;
         }
     }
