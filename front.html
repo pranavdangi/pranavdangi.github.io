@@ -1,0 +1,158 @@
+<html> 
+  <head>
+  <title>Pranav Dangi</title>
+  </head>
+  <body>
+  <h2>Pranav Dangi</h2>
+<p><font size="3em">
+Researcher, School of Computing, National University of Singapore (NUS), 2023-
+<br>
+B.E., Birla Institute of Technology and Science (BITS), Pilani, 2023.<br>
+</font></p>
+<p><font size="3em">
+<img src="email.png" align="top" hspace="1" height="30em"> 
+<br> 
+<a align="right">dangi (at) comp.nus.edu.sg</a>
+<br> 
+<a align="right">dangipranav (at) gmail.com</a>
+<br clear="left">
+</font></p>
+<br>
+<br>
+<p><b>
+<p><font size="3em"> Research:</b>
+  <br> I am currently advised by Prof. Tulika Mitra.
+  <br> My research spans computer architecture, VLSI design/integration, circuits and compilers. 
+  <br> More specifically, I currently work on execution paradigms for reconfigurable dataflow architectures (well, CGRAs) and their programming abstractions.
+  <br> Oflate, my work has tried to tackle sparse and irregular applications that hit the memory wall. 
+<p><b><font size="3em">Previously:</b>
+  <br> I was a Google Summer of Code Fellow with RTEMS (Real Time Executive for Multiprocessor Systems), 
+  <br> had a short stint with the Physical Design team for the Interconnects IP Group at Intel,
+  <br> I have worked with TCS Research's High Performance Computing group in Mumbai,
+  <br> and was invloved in Computer Arithmetic and VLSI design research during my undergrad at BITS Pilani.
+<br><br>
+<H5>Publications</H5>
+    <ul>
+      <li>Paper 1 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 1 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 1 </li>
+      <li>Paper 2 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 1 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 2 </li>
+      <li>Paper 3 </li>
+      <li>Paper 3 </li>
+    </ul>
+Last updated 15 August 2024
+</font></p>
+</body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var scroll_dir = true;
+    let oldScroll = window.scrollY;
+    let lastDirection = null;
+
+    function handleScroll() {
+        let currentScroll = window.scrollY;
+        let scrollDirection = currentScroll > oldScroll ? 'down' : 'up';
+
+        if (scrollDirection !== lastDirection) {
+            if (scrollDirection === 'down') {
+                window.parent.postMessage('changeToOtherImage', '*');
+            } else if (scrollDirection === 'up') {
+                window.parent.postMessage('changeToLogo', '*');
+            }
+            lastDirection = scrollDirection;
+            oldScroll = currentScroll;
+        }
+    }
+    window.addEventListener('scroll', handleScroll);
+  });
+</script>
+
+</html>

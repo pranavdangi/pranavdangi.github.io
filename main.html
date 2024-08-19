@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranav Dangi</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border: 1px solid #808080;
+        }
+        .top-row {
+            display: flex;
+            height: 10%;
+            border: 1px solid #808080;
+        }
+        .logo {
+            width: 8%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #808080;
+        }
+        .logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border: 1px solid #808080;
+        }
+        .contents {
+            width: 92%;
+            border: 1px solid #808080;
+        }
+        .main-content {
+            height: 90%;
+            border: 1px solid #808080;
+        }
+        iframe {
+            border: 1px solid #808080 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div id="top-sticky" class="top-row">
+        <div class="logo">
+            <iframe name="logoImage" width="100%" height="100%" id="logoImage" src="logo.html"></iframe>
+        </div>
+        <div class="contents">
+            <iframe id="frame1" src="contents.html" style="width:100%; height:100%;"></iframe>
+        </div>
+    </div>
+    <div id="main-frame" class="main-content">
+        <iframe id="frame2" src="front.html" name="page" style="width:100%; height:100%;"></iframe>
+    </div>
+    </div>
+  
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var ifr = document.getElementById('main-frame');
+        var logoImage = document.getElementById('logoImage');
+        var topSticky = document.getElementById('top-sticky');
+        //topSticky.addEventListener('mouseover', function() {
+        //    logoImage.src = 'logo.html';  // Original image URL
+        //});
+        window.addEventListener('message', function(event) {
+            if (event.data === 'changeToOtherImage') {
+                document.getElementById('logoImage').src = 'otherImage.html';
+            }
+            if (event.data === 'changeToLogo') {
+                document.getElementById('logoImage').src = 'logo.html';
+            }
+        });
+    });
+    </script>
+    
+    <noscript>
+        <p>Javascript disabled, This document originally contains:</p>
+        <ul>
+            <li><img src="me.jpeg" alt="Pranav Dangi" style="max-width: 100px; max-height: 100px; border: 1px solid #0f0;"> Pranav Dangi</li>
+            <li><a href="contents.html">Table of Contents</a></li>
+            <li><a href="front.html">Critical Information</a></li>
+        </ul>
+    </noscript>
+</body>
+</html>
