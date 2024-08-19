@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     .link-list {
-        column-count: 3; /* or 3 for three columns */
+        column-count: 3;
     }
     .link-list dt {
         margin-bottom: 0.5%;
@@ -20,4 +20,12 @@
 <DT><A href="blog.html" target="page">Blog</A>
 <DT><A href="interests.html" target="page">Other Interests</A>
 </DL>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function handleClick() {
+            window.parent.postMessage('changeToLogo', '*');
+        }
+        window.addEventListener('click', handleClick);
+    });
+</script>
 </HTML>
