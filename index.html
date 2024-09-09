@@ -68,10 +68,12 @@
         var logoImage = document.getElementById('logoImage');
         window.addEventListener('message', function(event) {
             if (event.data === 'changeToOtherImage') {
-                document.getElementById('logoImage').src = 'otherImage.html';
+                //document.getElementById('logoImage').src = 'otherImage.html';
+                document.getElementById('logoImage').contentWindow.location.replace('otherImage.html');
             }
             if (event.data === 'changeToLogo') {
-                document.getElementById('logoImage').src = 'logo.html';
+                //document.getElementById('logoImage').src = 'logo.html';
+                document.getElementById('logoImage').contentWindow.location.replace('logo.html');
             }
         });
     });
